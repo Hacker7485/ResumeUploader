@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Candidates</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/s.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="alert-danger text-center">Candidate Detail</h1>
+      <div class="row">
+        <div class="col-sm-10">
+          <h3 class="text-center"> <u>Resume</u> </h3>
+          <table>
+            <tr>
+              <td><label for="">Application No-</label></td>
+              <td>{{candidate.id}}</td>
+              <img src="{{candidate.profile_image.url}}" alt="" class="img-fluid img-thumbnail mt-2" width="150" height="150">
+            </tr>
+
+            <tr>
+              <td><label for="">Gender</label></td>
+              <td>{{candidate.gender}}</td>
+            </tr>
+            <tr>
+              <td><label for="">Address</label></td>
+              <td>{{candidate.locality}},{{candidate.city}},{{candidate.state}},-{{candidate.pin}}</td>
+            </tr>
+            <tr>
+              <td><label for="">Mobile No</label></td>
+              <td>{{candidate.mobile}}</td>
+            </tr>
+            <tr>
+              <td><label for="">Email Id</label></td>
+              <td>{{candidate.email}}</td>
+            </tr>
+            <tr>
+              <td><label for="">Preferred Job Cities</label></td>
+              <td>{{candidate.job_city}}</td>
+            </tr>
+            <tr>
+              <td><label for="">Attachment</label></td>
+              <td> <a href="{{candidate.CV.url}}">Download</a> </td>
+            </tr>
+          </table>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
