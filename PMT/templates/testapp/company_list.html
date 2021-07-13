@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block bodyblock %}
+
+{% for c in company %}
+
+  <h2> <a href="{{c.pk}}">{{c.name}}</a> </h2>
+{% endfor %}
+
+<a href="/create" class="btn btn-primary btn-lg"> Comapny Create</a>
+
+
+{% endblock %}
